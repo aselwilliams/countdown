@@ -2,22 +2,22 @@ import {useState, useEffect} from 'react'
 import './App.css';
 
 function App() {
-  const [time, setTime]=useState(1405000);
-  const [timerOn, setTimerOn] =useState(true);
+  const [time, setTime] = useState(1405000);
+  const [timerOn, setTimerOn] = useState(true);
 
-  useEffect(()=>{
-    let interval=null;
+  useEffect(() => {
+    let interval = null;
     if(timerOn) {
-      interval = setTimeout(()=> {
-        setTime(prevState=>prevState-1000)
+      interval = setTimeout(() => {
+        setTime(prevState => prevState-1000)
     },1000);
     } else {
       clearTimeout(interval)
     }
-    if(time==0){
+    if(time == 0){
       clearTimeout(interval)
   } 
-  return ()=>clearTimeout(interval)
+  return ()=> clearTimeout(interval)
   },[timerOn][time])
 
   return (

@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 main {
   width: 500px;
   height:350px;
@@ -10,10 +8,12 @@ main {
   padding-top: 100px;
   font-family: sans-serif;
 }
-h1{
+
+h1 {
   font-size: 50px;
   color: rgb(25, 60, 61);
 }
+
 button {
   text-transform: uppercase;
   padding: 15px 20px;
@@ -22,17 +22,20 @@ button {
   font-weight: 600;
   margin-top: 20px;
 }
+
 .card-box {
   padding: 50px 10px;
   border: 10px solid #7fd8e6;
   border-radius: 12px;
   background-color: #ddf2f5;
 }
+
 #display-timer {
   font-size: 4rem;
   font-weight: bold;
   margin: 10px;
 }
+
 .stop {
   background-color: darkred;
   color:white;
