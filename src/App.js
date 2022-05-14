@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import {useState, useEffect} from 'react'
 import './App.css';
 
 function App() {
+  const [time, setTime]=useState(0);
+  const [timerOn, setTimerOn] =useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <main>
+        <div id="display-timer">00:20:33</div>
+        <button onClick={()=>setTimerOn(false)} id="stop-timer">Stop Timer</button>
+        <button onClick={()=>setTimerOn(true)} id="stop-timer">Resume Timer</button>
+        <button onClick={()=>setTimerOn(true)} id="stop-timer">Start Timer</button>
+        <button onClick={()=>setTime(0)} id="stop-timer">Reset Timer</button>
+    </main>
     </div>
   );
 }
